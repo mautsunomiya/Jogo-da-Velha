@@ -1,5 +1,8 @@
 let casa = document.querySelectorAll(".casa");
-let modal = document.querySelector("#modal");
+let modalGanhar = document.querySelector("#modal-ganhou");
+let modalEmpate = document.querySelector("#modal-empatou");
+let botaoModal = document.querySelector("#botao-modal")
+
 
 //casa.innerHTML = "X"
 //for(i=0; i<=9; i++){
@@ -16,7 +19,12 @@ function clique(){
      this.removeEventListener('click', clique);
      if(i>=5){
         verificar();
+        //botaoModal.addEventListener = ("click", fechar)
+        if (i==9 && verificar!=true){
+            modalEmpate.style.display = "block";
+        } 
     }
+
     
 }
 
@@ -46,21 +54,31 @@ function comparar(casa1, casa2, casa3){
      comparar(casa[2], casa[5], casa[8]) ||
      comparar(casa[0], casa[4], casa[8]) ||
      comparar(casa[2], casa[4], casa[6])){
-        modal.style.display = "block";
-        reset();
+        verificar = true
+        modalGanhar.style.display = "block";
+    // }else{
+    //     modalEmpate.style.display = "block"
     }
  }
- function reset(){
-     casa[0] == "";
-     casa[1] == "";
-     casa[2] == "";
-     casa[3] == "";
-     casa[4] == "";
-     casa[5] == "";
-     casa[6] == "";
-     casa[7] == "";
-     casa[8] == "";
- }
+ 
+
+ botaoModal.onclick = function(){
+    modalGanhar.style.display = "none";
+}
+
+botaoModal.onclick = function(){
+    casa[0] === "";
+    casa[1] === "";
+    casa[2] === "";
+    casa[3] === "";
+    casa[4] === "";
+    casa[5] === "";
+    casa[6] === "";
+    casa[7] === "";
+    casa[8] === "";
+}
+
+
 
 
  

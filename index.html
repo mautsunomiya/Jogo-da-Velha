@@ -7,6 +7,7 @@
     <title>Joguinho</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
 </head>
 <body>
     <div class="linha">
@@ -25,10 +26,22 @@
         <div class="casa" id="casa9"></div>
     </div>
 
-    <section id="modal">
+    <section id="modal-ganhou">
+        <div id="borda-top"></div>
         <img src="win.gif" alt="">
         <p>Você venceu!!!</p>
+        <button id="botao-modal">Fechar</button>
+        <div id="borda-botton"></div>
+    
     </section>
+    <section id="modal-empatou">
+            <div id="borda-top"></div>
+            <img src="empate.gif" alt="">
+            <p>Empatou</p>
+            <button id="botao-modal">Fechar</button>
+            <div id="borda-botton"></div>
+        
+        </section>
 
 </body>
 </html>
